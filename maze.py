@@ -21,10 +21,20 @@ class Maze:
                 col_cells.append(Cell(self.__win))
 
             self._cells.append(col_cells)
-
+        
+        self._break_entrance_and_exit()
+        
         for i in range(self.__num_cols):
             for j in range(self.__num_rows):
                 self._draw_cell(i, j)
+
+
+    def _break_entrance_and_exit(self):
+        self._cells[0][0].has_top_wall = False
+        self._draw_cell(0, 0)
+        
+        self._cells[self.__num_cols - 1][self.__num_rows - 1].has_bottom_wall = False
+        self._draw_cell(self.__num_cols - 1, self.__num_rows - 1)
 
 
     def _draw_cell(self, i, j):

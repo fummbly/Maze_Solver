@@ -26,15 +26,15 @@ class Cell:
 
         if self.has_top_wall:
             top_wall = Line(Point(self.__x1, self.__y1), Point(self.__x2, self.__y1))
-            #self.__win.draw_line(top_wall, "black")
+            self.__win.draw_line(top_wall, "black")
 
         if self.has_right_wall:
             right_wall = Line(Point(self.__x2, self.__y1), Point(self.__x2, self.__y2))
-            #self.__win.draw_line(right_wall, "black")
+            self.__win.draw_line(right_wall, "black")
 
         if self.has_bottom_wall:
             bottom_wall = Line(Point(self.__x1, self.__y2), Point(self.__x2, self.__y2))
-            #self.__win.draw_line(bottom_wall, "black")
+            self.__win.draw_line(bottom_wall, "black")
 
 
     def draw_move(self, to_cell, redo=False):
