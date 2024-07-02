@@ -1,4 +1,5 @@
-from tkinter import Tk, BOTH, Canvas
+from tkinter import Tk, BOTH, Canvas, ttk
+from ttkthemes import ThemedTk
 
 class Point:
     def __init__(self, x, y):
@@ -20,11 +21,13 @@ class Line:
 
 class Window :
     def __init__(self, width, height):
-        self.__root = Tk()
+        self.__root = ThemedTk(theme="yaru")
         self.__root.title("Maze Solver")
-            
-        self.__canvas = Canvas(self.__root, bg="white", height=height, width=width)
-        self.__canvas.pack(fill=BOTH, expand=1)
+        frame = ttk.Frame(self.__root, padding=10)
+        frame.grid()    
+        self.__canvas = Canvas(frame, bg="white", height=height, width=width)
+        self.__canvas.grid(column=0, row=0)
+        ttk.Button(frame, text="Hello World").grid(column=0, row=1)
         self.__running = False
 
         self.__root.protocol("WM_DELETE_WINDOW", self.close)
