@@ -2,7 +2,7 @@
 
 Basic maze solving program in Python using Tk for the drawing framework.
 
-![[assets/demo.GIF]]
+![demo gif](asset/demo.gif) \*_this is sped up_
 
 ## Installing
 
@@ -32,6 +32,7 @@ The program has optional arguments
 
 - [ ] Create arguments for selecting different search algorithms
 - [ ] Automate window size based off size of maze
+- [ ] Speed argument for changing the speed of the animation
 
 ## What I learned
 
