@@ -2,7 +2,7 @@
 
 Basic maze solving program in Python using Tk for the drawing framework.
 
-![demo gif](asset/demo.gif) \*_this is sped up_
+![demo gif](assets/demo.gif) \*_this is sped up_
 
 ## Installing
 
